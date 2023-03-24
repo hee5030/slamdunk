@@ -1,7 +1,7 @@
 <launch>
     <!-- <node pkg="kobuki_tf" type="kobuki_tf" name="kobuki_tf" output="screen"> -->
-    <!-- <node pkg="scout_messenger" type="scout_messenger" name="scout_messenger" output="screen">
-    </node> -->
+    <node pkg="scout_messenger" type="scout_messenger" name="scout_messenger" output="screen">
+    </node>
         <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
                  <remap from="scan" to="scan"/>
                  <param name="odom_frame" value="odom"/>

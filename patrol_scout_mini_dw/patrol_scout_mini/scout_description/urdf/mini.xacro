@@ -82,7 +82,7 @@
     </link>
 
     <joint name="inertial_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="3 3 0" rpy="0 0 0" />
         <parent link="base_link" />
         <child link="inertial_link" />
     </joint>
