@@ -34,34 +34,35 @@ if os.name == 'nt':
   import msvcrt, time
 else:
   import tty, termios
+import subprocess
 
-BURGER_MAX_LIN_VEL = 0.22
+BURGER_MAX_LIN_VEL = 0.3
 BURGER_MAX_ANG_VEL = 2.84
 
-WAFFLE_MAX_LIN_VEL = 0.26
+WAFFLE_MAX_LIN_VEL = 0.3
 WAFFLE_MAX_ANG_VEL = 1.82
 
-LIN_VEL_STEP_SIZE = 0.01
+LIN_VEL_STEP_SIZE = 0.2
 ANG_VEL_STEP_SIZE = 0.1
 
 msg = """
-Control Your TurtleBot3!
+Control Your Slamdunk!
 ---------------------------
 Moving around:
         w
    a    s    d
         x
 
-w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
-a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+w/x : increase/decrease linear velocity 
+a/d : increase/decrease angular velocity 
 
 space key, s : force stop
 
-CTRL-C to quit
+Z to quit
 """
 
 e = """
-Communications Failed
+Goodbye bro !
 """
 
 def getKey():
@@ -171,6 +172,9 @@ if __name__=="__main__":
                 target_angular_vel  = 0.0
                 control_angular_vel = 0.0
                 print(vels(target_linear_vel, target_angular_vel))
+            elif key == 'z':
+                roslaunch_process = None
+                roslaunch_process.send_signal(subprocess.signal.SIGINT)  # roslaunch 실행 프로세스에 강제 종료 시그널 전송
             else:
                 if (key == '\x03'):
                     break
