@@ -30,13 +30,13 @@ DWAPlannerROS:
   # latch_xy_goal_tolerance: false
 
   xy_goal_tolerance: 0.6
-  yaw_goal_tolerance: 0.5
+  yaw_goal_tolerance: 1.5
   latch_xy_goal_tolerance: false
   
 
   # Forward Simulation Parameters
   sim_time: 2.0
-  vx_samples: 20
+  vx_samples: 0
   vy_samples: 0
   vth_samples: 40
   controller_frequency: 5.0  # turtle과 다름
@@ -56,3 +56,5 @@ DWAPlannerROS:
   # Debugging
   publish_traj_pc : true
   publish_cost_grid_pc: true
+
+
