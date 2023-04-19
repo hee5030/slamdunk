@@ -268,4 +268,4 @@ if __name__ == '__main__':
     sis.start()
     outcome = sm.execute() # 실행
     rospy.spin() # spin으로 여기까지 계속 실행
-    sis.stop() # 정지
+    sis.stop() # 정지1
