@@ -22,7 +22,7 @@
         <param name="base_frame" type="string" value="base_link" /> -->
     </node>
     <!-- <include file="$(find gl_ros_driver)/launch/gl_ros_driver.launch"></include> -->
-    <!-- <include file="$(find rplidar_ros)/launch/rplidar.launch"></include> -->
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"></include>
     <node pkg="tf" type="static_transform_publisher" name="ROSbot_laser" args="0 0 0 3.14 0 0 base_link laser 100" />
     
     

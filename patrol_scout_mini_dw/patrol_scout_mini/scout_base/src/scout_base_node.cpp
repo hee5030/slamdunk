@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     messenger.SetupSubscription();
 
     // publish robot state at 50Hz while listening to twist commands
-    ros::Rate rate_50hz(50); // 50Hz
+    ros::Rate rate_50hz(1); // 50Hz
     while (true)
     {
         messenger.PublishStateToROS();

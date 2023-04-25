@@ -33,13 +33,13 @@ obstacle_layer:
 
 
 ## use laserscan with pointcloud_to_laserscan node (scout_navigation.launch file)
-#  observation_sources: scan
-#  scan:
-#   data_type: LaserScan
-#   topic: scan
-#   marking: true
-#   clearing: true 
-#   inf_is_valid: true  #this parameter is important to do the trick
+ observation_sources: scan
+ scan:
+  data_type: LaserScan
+  topic: scan
+  marking: true
+  clearing: true 
+  inf_is_valid: true  #this parameter is important to do the trick
 
   
 inflation_layer:

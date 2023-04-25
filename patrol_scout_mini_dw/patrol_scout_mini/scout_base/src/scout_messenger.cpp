@@ -13,6 +13,8 @@
 
 #include "scout_msgs/ScoutStatus.h"
 
+
+
 namespace wescore
 {
 ScoutROSMessenger::ScoutROSMessenger(ros::NodeHandle *nh) : scout_(nullptr), nh_(nh)
@@ -261,3 +263,5 @@ void ScoutROSMessenger::PublishOdometryToROS(double linear, double angular, doub
     odom_publisher_.publish(odom_msg);
 }
 } // namespace wescore
+
+
